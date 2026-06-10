@@ -67,8 +67,8 @@ body { background: #2a2a2a; font-family: 'Malgun Gothic','Apple SD Gothic Neo',A
 /* ── 테이블 ── */
 .table-scroll { margin-bottom: 8px; }
 table { border-collapse: collapse; width: 100%; table-layout: fixed; }
-th { background: #444; color: #fff; padding: 5px 3px; text-align: center; border: 1px solid #333; font-size: 10px; white-space: nowrap; overflow: hidden; }
-td { padding: 6px 3px; text-align: center; border: 1px solid #ccc; font-size: 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+th { background: #444; color: #fff; padding: 5px 3px; text-align: center; border: 1px solid #333; font-size: 12px; white-space: nowrap; overflow: hidden; }
+td { padding: 6px 3px; text-align: center; border: 1px solid #ccc; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .td-action { white-space: nowrap; vertical-align: middle; padding: 3px 2px !important; overflow: visible !important; }
 .td-action .btn { margin: 1px; padding: 3px 4px; font-size: 9.5px; }
 tr:nth-child(even) td { background: #f0f0f0; }
@@ -87,7 +87,6 @@ tr.highlight td { background: #FFFDE7; }
   background: #F0F4FF; border: 1px solid #C5CAE9; border-radius: 20px;
   padding: 4px 10px; font-size: 12px; font-weight: bold; color: #3949AB;
 }
-.member-chip.leader { background: #E87722; border-color: #E87722; color: #fff; }
 
 /* ── 팀 정보 팝업 모달 ── */
 .modal-backdrop {
@@ -244,7 +243,7 @@ tr.highlight td { background: #FFFDE7; }
 <!-- ── 네비게이션 ── -->
 <div class="nav-bar">
   <button class="nav-btn" id="btn-prev" onclick="changeSlide(-1)" disabled>◀ 이전</button>
-  <span class="nav-label" id="nav-label">1 / 8<br>1.1 메인 현황판</span>
+  <span class="nav-label" id="nav-label">1 / 7<br>1.1 메인 현황판</span>
   <button class="nav-btn" id="btn-next" onclick="changeSlide(1)">다음 ▶</button>
 </div>
 
@@ -275,36 +274,36 @@ tr.highlight td { background: #FFFDE7; }
       <div class="table-scroll">
         <table style="table-layout:fixed;">
           <colgroup>
-            <col style="width:26px"><col style="width:30px"><col style="width:42px">
-            <col style="width:48px"><col style="width:30px">
+            <col style="width:68px">
+            <col style="width:50px"><col style="width:30px">
             <col style="width:38px"><col style="width:38px"><col style="width:auto">
           </colgroup>
           <thead>
             <tr>
-              <th>No.</th><th>코스</th><th>예약</th>
+              <th>코스/예약</th>
               <th>예약자 <span class="callout" style="font-size:9px;vertical-align:super;">1</span></th>
               <th>인원</th><th>출발</th><th>종료</th>
               <th>액션 <span class="callout" style="font-size:9px;vertical-align:super;">2</span></th>
             </tr>
           </thead>
           <tbody>
-            <tr><td>1</td><td>A</td><td>09:00</td>
+            <tr><td>A 09:00</td>
               <td class="td-team" onclick="openTeam('김철수','010-1234-5678','-','-',['김철수','이민수','박지영','최강현'])"><span class="team-name">김철수</span><span class="info-ic">i</span></td>
               <td>4명</td><td>09:03</td><td>-</td>
               <td class="td-action"><span class="btn btn-gray">출발</span><span class="btn btn-red">종료</span><span class="btn btn-orange">호출</span></td></tr>
-            <tr class="highlight"><td>2</td><td>A</td><td>09:20</td>
+            <tr class="highlight"><td>A 09:20</td>
               <td class="td-team" onclick="openTeam('이영희','010-2345-6789','○○기업','VIP',['이영희','박서준','최민지'])"><span class="team-name">이영희</span><span class="info-ic">i</span></td>
               <td>3명</td><td>-</td><td>-</td>
               <td class="td-action"><span class="btn btn-green">출발</span><span class="btn btn-gray">종료</span><span class="btn btn-orange">호출</span></td></tr>
-            <tr><td>3</td><td>C</td><td>09:00</td>
+            <tr><td>C 09:00</td>
               <td class="td-team" onclick="openTeam('박민준','010-3456-7890','-','-',['박민준','김태호','이승민','정예린'])"><span class="team-name">박민준</span><span class="info-ic">i</span></td>
               <td>4명</td><td>09:05</td><td>10:42</td>
               <td class="td-action"><span class="btn btn-gray">출발</span><span class="btn btn-gray">종료</span><span class="btn btn-gray">호출</span></td></tr>
-            <tr class="highlight"><td>4</td><td>C</td><td>09:30</td>
+            <tr class="highlight"><td>C 09:30</td>
               <td class="td-team" onclick="openTeam('최지훈','010-4567-8901','△△클럽','-',['최지훈','강민서'])"><span class="team-name">최지훈</span><span class="info-ic">i</span></td>
               <td>2명</td><td>-</td><td>-</td>
               <td class="td-action"><span class="btn btn-green">출발</span><span class="btn btn-gray">종료</span><span class="btn btn-orange">호출</span></td></tr>
-            <tr><td>5</td><td>A</td><td>09:10</td>
+            <tr><td>A 09:10</td>
               <td class="td-team" onclick="openTeam('정수민','010-5678-9012','-','-',['정수민','윤지혁','한채원','오민재'])"><span class="team-name">정수민</span><span class="info-ic">i</span></td>
               <td>4명</td><td>09:12</td><td>-</td>
               <td class="td-action"><span class="btn btn-gray">출발</span><span class="btn btn-red">종료</span><span class="btn btn-orange">호출</span></td></tr>
@@ -323,7 +322,7 @@ tr.highlight td { background: #FFFDE7; }
       <!-- 플로팅 전환 버튼 -->
       <div class="float-switch">
         <button class="float-btn qr">📷 QR 스캔</button>
-        <button class="float-btn" style="background:#555;">🔘 버튼 입력</button>
+        <button class="float-btn" style="background:#555;">🔘 수동 관리</button>
       </div>
     </div>
 
@@ -356,7 +355,7 @@ tr.highlight td { background: #FFFDE7; }
     <div class="sl-content">
       <div class="info-bar">
         <div class="info-bar-title">버튼 입력 모드</div>
-        <div class="info-bar-sub">현재 모드: 버튼 입력 &nbsp;|&nbsp; 2026-06-09 09:22</div>
+        <div class="info-bar-sub" style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;">현재 모드: 수동 관리 &nbsp;|&nbsp; 2026-06-09 &nbsp;<span style="font-size:16px;font-weight:900;color:#E87722;background:#FFF3E0;padding:2px 10px;border-radius:6px;letter-spacing:1px;">⏱ 09:22</span></div>
       </div>
 
       <div class="table-scroll">
@@ -370,19 +369,19 @@ tr.highlight td { background: #FFFDE7; }
             <tr><th>No.</th><th>코스</th><th>예약</th><th>예약자</th><th>인원</th><th>출발</th><th>종료</th><th>액션</th></tr>
           </thead>
           <tbody>
-            <tr><td>1</td><td>A</td><td>09:00</td>
+            <tr><td>A 09:00</td>
               <td class="td-team" onclick="openTeam('김철수','010-1234-5678','-','-',['김철수','이민수','박지영','최강현'])"><span class="team-name">김철수</span><span class="info-ic">i</span></td>
               <td>4명</td><td>09:03</td><td>-</td>
               <td class="td-action"><span class="callout" style="font-size:9px;vertical-align:super;">2</span><span class="btn btn-gray">출발</span><span class="btn btn-red">종료</span></td></tr>
-            <tr class="highlight"><td>2</td><td>A</td><td>09:20</td>
+            <tr class="highlight"><td>A 09:20</td>
               <td class="td-team" onclick="openTeam('이영희','010-2345-6789','○○기업','VIP',['이영희','박서준','최민지'])"><span class="team-name">이영희</span><span class="info-ic">i</span></td>
               <td>3명</td><td>-</td><td>-</td>
               <td class="td-action"><span class="callout" style="font-size:9px;vertical-align:super;">1</span><span class="btn btn-green">출발</span><span class="btn btn-gray">종료</span> <span style="font-size:10px;color:#E65100;font-style:italic;">◀</span></td></tr>
-            <tr><td>3</td><td>C</td><td>09:00</td>
+            <tr><td>C 09:00</td>
               <td class="td-team" onclick="openTeam('박민준','010-3456-7890','-','-',['박민준','김태호','이승민','정예린'])"><span class="team-name">박민준</span><span class="info-ic">i</span></td>
               <td>4명</td><td>09:05</td><td>10:42</td>
               <td class="td-action"><span class="btn btn-gray">출발</span><span class="btn btn-gray">종료</span></td></tr>
-            <tr class="highlight"><td>4</td><td>C</td><td>09:30</td>
+            <tr class="highlight"><td>C 09:30</td>
               <td class="td-team" onclick="openTeam('최지훈','010-4567-8901','△△클럽','-',['최지훈','강민서'])"><span class="team-name">최지훈</span><span class="info-ic">i</span></td>
               <td>2명</td><td>-</td><td>-</td>
               <td class="td-action"><span class="btn btn-green">출발</span><span class="btn btn-gray">종료</span></td></tr>
@@ -396,7 +395,7 @@ tr.highlight td { background: #FFFDE7; }
           <div class="popup-head">출발 기록 확인</div>
           <div class="popup-body">
             <div style="margin-bottom:8px;font-size:13px;">아래 팀의 출발을 기록하시겠습니까?</div>
-            <div class="popup-info">팀명: 이영희 &nbsp;|&nbsp; A코스 1번홀<br>예약 09:20 &nbsp;|&nbsp; 현재 09:22</div>
+            <div class="popup-info">팀명: 이영희 &nbsp;|&nbsp; A코스<br>예약 09:20 &nbsp;|&nbsp; 현재 09:22</div>
           </div>
           <div class="popup-footer">
             <span class="btn" style="background:#eee;color:#444;padding:8px 16px;font-size:13px;min-height:44px;">취 소</span>
@@ -409,7 +408,7 @@ tr.highlight td { background: #FFFDE7; }
       <!-- 플로팅 전환 버튼 -->
       <div class="float-switch">
         <button class="float-btn qr">📷 QR 스캔</button>
-        <button class="float-btn" style="background:#1A1A1A;border:1px solid #E87722;">🔘 버튼 입력 ✓</button>
+        <button class="float-btn" style="background:#1A1A1A;border:1px solid #E87722;">🔘 수동 관리 ✓</button>
       </div>
     </div>
 
@@ -455,10 +454,8 @@ tr.highlight td { background: #FFFDE7; }
         <span class="cam-status-badge badge-scanning" style="margin-left:6px;">● 스캔 중</span>
       </div>
       <div class="cam-full" style="margin-bottom:12px;">
-        <div class="cam-top-bar">
-          <span style="color:#90CAF9;font-size:12px;font-weight:bold;">📷 카메라 활성</span>
-          <span style="color:#aaa;font-size:11px;">자동 초점 모드</span>
-          <span style="color:#FFEB3B;font-size:11px;font-weight:bold;">QR 스캔 모드</span>
+        <div class="cam-top-bar" style="justify-content:center;">
+          <span style="color:#E87722;font-size:16px;font-weight:bold;letter-spacing:2px;">📷 QR스캔</span>
         </div>
         <div class="cam-viewfinder" style="height:180px;">
           <div class="cam-corner tl"></div>
@@ -467,7 +464,6 @@ tr.highlight td { background: #FFFDE7; }
           <div class="cam-corner br"></div>
           <div class="cam-scan-line"></div>
           <span style="opacity:.5;">[ 카메라 프리뷰 ]</span>
-          <div class="cam-caption">손목띠 QR코드를 사각형 안에 맞춰주세요</div>
         </div>
         <div class="cam-side">
           <div style="display:flex;align-items:center;justify-content:space-between;">
@@ -511,7 +507,7 @@ tr.highlight td { background: #FFFDE7; }
       <!-- 플로팅 전환 버튼 -->
       <div class="float-switch">
         <button class="float-btn" style="background:#1A1A1A;border:1px solid #E87722;">📷 QR 스캔 ✓</button>
-        <button class="float-btn" style="background:#555;">🔘 버튼 입력</button>
+        <button class="float-btn" style="background:#555;">🔘 수동 관리</button>
       </div>
     </div>
 
@@ -556,14 +552,14 @@ tr.highlight td { background: #FFFDE7; }
       <div class="select-popup" style="margin-bottom:14px;">
         <div class="select-popup-head">📷 QR 인식 완료 — 기록 유형을 선택하세요</div>
         <div class="select-popup-info">
-          <strong>이영희</strong> &nbsp;|&nbsp; A코스 1번홀 &nbsp;|&nbsp; 3명 &nbsp;|&nbsp; 단체: ○○기업<br>
-          <span style="font-size:11px;color:#1565C0;">예약시간: 09:20 &nbsp;·&nbsp; 현재: 09:22 &nbsp;·&nbsp; 출발 미기록</span>
+          <strong>이영희</strong> &nbsp;|&nbsp; A코스 &nbsp;|&nbsp; 3명 &nbsp;|&nbsp; 단체: ○○기업<br>
+          <span style="font-size:11px;color:#1565C0;">예약시간: 09:20 &nbsp;·&nbsp; 출발 미기록</span>
         </div>
-        <div style="padding:6px 14px 2px;font-size:11px;color:#666;">※ 출발 미기록 팀: [출발 기록]만 활성화</div>
         <div class="select-popup-body">
-          <button class="select-btn select-btn-dep">🟢 출발 기록<br><span style="font-size:11px;font-weight:normal;">출발시간 기록</span></button>
-          <button class="select-btn" style="background:#BBBBBB;color:#888;">🔴 종료 기록<br><span style="font-size:11px;font-weight:normal;">(출발 후 활성)</span></button>
+          <button class="select-btn select-btn-dep">🟢 출발 기록</button>
+          <button class="select-btn" style="background:#BBBBBB;color:#888;">🔴 종료 기록</button>
         </div>
+        <div style="text-align:center;font-size:17px;font-weight:900;color:#E87722;padding:10px 0 6px;letter-spacing:2px;background:#FFF3E0;margin:0 14px;border-radius:6px;margin-bottom:4px;">⏱ 현재 09:22</div>
         <div class="select-popup-foot">
           <span class="btn" style="background:#eee;color:#555;padding:6px 14px;font-size:12px;">취소 (ESC)</span>
         </div>
@@ -577,11 +573,11 @@ tr.highlight td { background: #FFFDE7; }
       <div class="select-popup" style="opacity:.8;">
         <div class="select-popup-head" style="background:#333;">📷 QR 인식 완료 — 기록 유형을 선택하세요</div>
         <div class="select-popup-info" style="background:#E8F5E9;border-color:#A5D6A7;color:#1B5E20;">
-          <strong>김철수</strong> &nbsp;|&nbsp; A코스 1번홀 &nbsp;·&nbsp; <span style="font-size:11px;">출발: 09:03 기록됨</span>
+          <strong>김철수</strong> &nbsp;|&nbsp; A코스 &nbsp;·&nbsp; <span style="font-size:11px;">출발: 09:03 기록됨</span>
         </div>
         <div class="select-popup-body" style="padding:10px 14px;">
-          <button class="select-btn" style="background:#BBBBBB;color:#888;">🟢 출발 기록<br><span style="font-size:11px;">(이미 기록됨)</span></button>
-          <button class="select-btn select-btn-end">🔴 종료 기록<br><span style="font-size:11px;">종료시간 기록</span></button>
+          <button class="select-btn" style="background:#BBBBBB;color:#888;">🟢 출발 기록</button>
+          <button class="select-btn select-btn-end">🔴 종료 기록</button>
         </div>
       </div>
     </div>
@@ -628,7 +624,7 @@ tr.highlight td { background: #FFFDE7; }
         <div style="font-size:16px;font-weight:bold;color:#1B5E20;margin-bottom:8px;">✅ 출발 기록 완료</div>
         <div style="font-size:13px;color:#2E7D32;line-height:2.0;">
           팀 명 &nbsp;: 이영희 (○○기업)<br>
-          코 스 &nbsp;: A코스 1번홀<br>
+          코 스 &nbsp;: A코스<br>
           인 원 &nbsp;: 3명<br>
           기록시각: <strong>09:22:34</strong>
         </div>
@@ -647,7 +643,7 @@ tr.highlight td { background: #FFFDE7; }
         <div style="font-size:16px;font-weight:bold;color:#0D47A1;margin-bottom:8px;">✅ 종료 기록 완료</div>
         <div style="font-size:13px;color:#1565C0;line-height:2.0;">
           팀 명 &nbsp;: 김철수<br>
-          코 스 &nbsp;: A코스 1번홀<br>
+          코 스 &nbsp;: A코스<br>
           출발시각: 09:03 &nbsp;→&nbsp; <strong>종료: 10:44:12</strong><br>
           플레이시간: <strong>1시간 41분</strong>
         </div>
@@ -688,7 +684,7 @@ tr.highlight td { background: #FFFDE7; }
       <!-- 플로팅 전환 버튼 -->
       <div class="float-switch">
         <button class="float-btn" style="background:#1A1A1A;border:1px solid #E87722;">📷 QR 스캔 ✓</button>
-        <button class="float-btn" style="background:#555;">🔘 버튼 입력</button>
+        <button class="float-btn" style="background:#555;">🔘 수동 관리</button>
       </div>
     </div>
 
@@ -726,25 +722,39 @@ tr.highlight td { background: #FFFDE7; }
       </div>
       <div class="monitor-outer">
         <div class="mon-wait-screen">
-          <div class="mon-title-bar">⛳&nbsp; DA파크골프해운대 &nbsp;|&nbsp; 스타팅 안내 &nbsp;|&nbsp; <span style="color:#FFEB3B;">09:22</span></div>
-          <div style="font-size:12px;color:#90CAF9;margin-bottom:8px;padding-left:2px;">📋 이후 출발 예정 팀</div>
+          <div class="mon-title-bar">⛳&nbsp; DA파크골프해운대 &nbsp;|&nbsp; 출발 안내 &nbsp;|&nbsp; <span style="color:#FFEB3B;">09:22</span></div>
           <div class="mon-next-row">
             <span class="mon-next-time">09:30</span>
-            <span class="mon-next-info">최지훈 &nbsp;·&nbsp; C코스 4번홀 &nbsp;·&nbsp; 2명</span>
-            <span class="mon-next-badge">대기중</span>
+            <div style="flex:1;">
+              <div class="mon-next-info">최*훈 &nbsp;·&nbsp; C코스 &nbsp;·&nbsp; 2명</div>
+              <div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:5px;">
+                <span style="background:#1565C0;color:#fff;font-size:11px;padding:2px 8px;border-radius:10px;">최*훈</span>
+                <span style="background:#1565C0;color:#fff;font-size:11px;padding:2px 8px;border-radius:10px;">강*서</span>
+              </div>
+            </div>
           </div>
           <div class="mon-next-row" style="opacity:.85;">
             <span class="mon-next-time">09:40</span>
-            <span class="mon-next-info">강민재 &nbsp;·&nbsp; A코스 3번홀 &nbsp;·&nbsp; 4명</span>
-            <span class="mon-next-badge" style="background:#555;">예약</span>
+            <div style="flex:1;">
+              <div class="mon-next-info">강*재 &nbsp;·&nbsp; A코스 &nbsp;·&nbsp; 4명</div>
+              <div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:5px;">
+                <span style="background:#1565C0;color:#fff;font-size:11px;padding:2px 8px;border-radius:10px;">강*재</span>
+                <span style="background:#1565C0;color:#fff;font-size:11px;padding:2px 8px;border-radius:10px;">이*수</span>
+                <span style="background:#1565C0;color:#fff;font-size:11px;padding:2px 8px;border-radius:10px;">박*영</span>
+                <span style="background:#1565C0;color:#fff;font-size:11px;padding:2px 8px;border-radius:10px;">최*현</span>
+              </div>
+            </div>
           </div>
           <div class="mon-next-row" style="opacity:.7;">
             <span class="mon-next-time">09:45</span>
-            <span class="mon-next-info">한수빈 &nbsp;·&nbsp; C코스 1번홀 &nbsp;·&nbsp; 3명</span>
-            <span class="mon-next-badge" style="background:#555;">예약</span>
-          </div>
-          <div style="text-align:center;font-size:11px;color:#5C6BC0;margin-top:10px;padding-top:6px;border-top:1px solid #283593;">
-            호출이 있으면 이 화면에 즉시 표시됩니다 &nbsp;|&nbsp; DA파크골프해운대
+            <div style="flex:1;">
+              <div class="mon-next-info">한*빈 &nbsp;·&nbsp; C코스 &nbsp;·&nbsp; 3명</div>
+              <div style="display:flex;flex-wrap:wrap;gap:4px;margin-top:5px;">
+                <span style="background:#1565C0;color:#fff;font-size:11px;padding:2px 8px;border-radius:10px;">한*빈</span>
+                <span style="background:#1565C0;color:#fff;font-size:11px;padding:2px 8px;border-radius:10px;">윤*혁</span>
+                <span style="background:#1565C0;color:#fff;font-size:11px;padding:2px 8px;border-radius:10px;">오*재</span>
+              </div>
+            </div>
           </div>
         </div>
         <div class="monitor-label">DISPLAY — 대기중</div>
@@ -786,9 +796,9 @@ tr.highlight td { background: #FFFDE7; }
       </div>
       <div class="monitor-outer" style="margin-bottom:14px;">
         <div class="monitor-screen" style="padding:14px;">
-          <div class="mon-title-bar">⛳&nbsp; DA파크골프해운대 &nbsp; 스타팅 안내</div>
-          <div class="mon-call-name">📣&nbsp; A코스 06:36 이영희님팀</div>
-          <div class="mon-msg">스타트라운지로<br>나와주시기 바랍니다</div>
+          <div class="mon-title-bar">⛳&nbsp; DA파크골프해운대 &nbsp; 출발 안내</div>
+          <div class="mon-call-name">📣&nbsp; A코스 06:36 이*희님팀</div>
+          <div class="mon-msg">스타트광장에서<br>대기해주시기 바랍니다</div>
         </div>
         <div class="monitor-label">DISPLAY — 호출중</div>
       </div>
@@ -911,8 +921,8 @@ function openTeam(name, phone, group, note, members) {
   const list = members || [name];
   document.getElementById('modal-count').textContent = list.length;
   const el = document.getElementById('modal-members');
-  el.innerHTML = list.map((m, i) =>
-    `<span class="member-chip${i === 0 ? ' leader' : ''}">${m}${i === 0 ? ' ★' : ''}</span>`
+  el.innerHTML = list.map(m =>
+    `<span class="member-chip">${m}</span>`
   ).join('');
 
   document.getElementById('team-modal').classList.add('show');
