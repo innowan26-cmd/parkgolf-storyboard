@@ -236,6 +236,10 @@ tr.highlight td { background: #FFFDE7; }
 /* ── 제어 버튼 그룹 ── */
 .ctrl-btn-group { display: flex; gap: 8px; margin-top: 8px; }
 .ctrl-btn-group .btn { flex: 1; padding: 10px 8px; font-size: 12px; text-align: center; min-height: 44px; }
+
+/* ── 1페이지 내장자 목록 표시 ── */
+#slide-1 .td-team { white-space: normal !important; vertical-align: top; }
+
 </style>
 </head>
 <body>
@@ -274,8 +278,8 @@ tr.highlight td { background: #FFFDE7; }
       <div class="table-scroll">
         <table style="table-layout:fixed;">
           <colgroup>
-            <col style="width:68px">
-            <col style="width:50px"><col style="width:30px">
+            <col style="width:58px">
+            <col style="width:65px"><col style="width:28px">
             <col style="width:38px"><col style="width:38px"><col style="width:auto">
           </colgroup>
           <thead>
@@ -288,23 +292,23 @@ tr.highlight td { background: #FFFDE7; }
           </thead>
           <tbody>
             <tr><td>A 09:00</td>
-              <td class="td-team" onclick="openTeam('김철수','010-1234-5678','-','-',['김철수','이민수','박지영','최강현'])"><span class="team-name">김철수</span><span class="info-ic">i</span></td>
+              <td class="td-team" onclick="openTeam('김철수','010-1234-5678','-','-',['김철수','이민수','박지영','최강현'])"><span class="team-name">김철수</span><span class="info-ic">i</span><div style="font-size:9px;color:#666;line-height:1.6;white-space:nowrap;overflow:hidden;">이민수</div><div style="font-size:9px;color:#666;line-height:1.6;white-space:nowrap;overflow:hidden;">박지영</div><div style="font-size:9px;color:#666;line-height:1.6;white-space:nowrap;overflow:hidden;">최강현</div></td>
               <td>4명</td><td>09:03</td><td>-</td>
               <td class="td-action"><span class="btn btn-gray">출발</span><span class="btn btn-red">종료</span><span class="btn btn-orange">호출</span></td></tr>
             <tr class="highlight"><td>A 09:20</td>
-              <td class="td-team" onclick="openTeam('이영희','010-2345-6789','○○기업','VIP',['이영희','박서준','최민지'])"><span class="team-name">이영희</span><span class="info-ic">i</span></td>
+              <td class="td-team" onclick="openTeam('이영희','010-2345-6789','○○기업','VIP',['이영희','박서준','최민지'])"><span class="team-name">이영희</span><span class="info-ic">i</span><div style="font-size:9px;color:#666;line-height:1.6;white-space:nowrap;overflow:hidden;">박서준</div><div style="font-size:9px;color:#666;line-height:1.6;white-space:nowrap;overflow:hidden;">최민지</div></td>
               <td>3명</td><td>-</td><td>-</td>
               <td class="td-action"><span class="btn btn-green">출발</span><span class="btn btn-gray">종료</span><span class="btn btn-orange">호출</span></td></tr>
             <tr><td>C 09:00</td>
-              <td class="td-team" onclick="openTeam('박민준','010-3456-7890','-','-',['박민준','김태호','이승민','정예린'])"><span class="team-name">박민준</span><span class="info-ic">i</span></td>
+              <td class="td-team" onclick="openTeam('박민준','010-3456-7890','-','-',['박민준','김태호','이승민','정예린'])"><span class="team-name">박민준</span><span class="info-ic">i</span><div style="font-size:9px;color:#666;line-height:1.6;white-space:nowrap;overflow:hidden;">김태호</div><div style="font-size:9px;color:#666;line-height:1.6;white-space:nowrap;overflow:hidden;">이승민</div><div style="font-size:9px;color:#666;line-height:1.6;white-space:nowrap;overflow:hidden;">정예린</div></td>
               <td>4명</td><td>09:05</td><td>10:42</td>
               <td class="td-action"><span class="btn btn-gray">출발</span><span class="btn btn-gray">종료</span><span class="btn btn-gray">호출</span></td></tr>
             <tr class="highlight"><td>C 09:30</td>
-              <td class="td-team" onclick="openTeam('최지훈','010-4567-8901','△△클럽','-',['최지훈','강민서'])"><span class="team-name">최지훈</span><span class="info-ic">i</span></td>
+              <td class="td-team" onclick="openTeam('최지훈','010-4567-8901','△△클럽','-',['최지훈','강민서'])"><span class="team-name">최지훈</span><span class="info-ic">i</span><div style="font-size:9px;color:#666;line-height:1.6;white-space:nowrap;overflow:hidden;">강민서</div></td>
               <td>2명</td><td>-</td><td>-</td>
               <td class="td-action"><span class="btn btn-green">출발</span><span class="btn btn-gray">종료</span><span class="btn btn-orange">호출</span></td></tr>
             <tr><td>A 09:10</td>
-              <td class="td-team" onclick="openTeam('정수민','010-5678-9012','-','-',['정수민','윤지혁','한채원','오민재'])"><span class="team-name">정수민</span><span class="info-ic">i</span></td>
+              <td class="td-team" onclick="openTeam('정수민','010-5678-9012','-','-',['정수민','윤지혁','한채원','오민재'])"><span class="team-name">정수민</span><span class="info-ic">i</span><div style="font-size:9px;color:#666;line-height:1.6;white-space:nowrap;overflow:hidden;">윤지혁</div><div style="font-size:9px;color:#666;line-height:1.6;white-space:nowrap;overflow:hidden;">한채원</div><div style="font-size:9px;color:#666;line-height:1.6;white-space:nowrap;overflow:hidden;">오민재</div></td>
               <td>4명</td><td>09:12</td><td>-</td>
               <td class="td-action"><span class="btn btn-gray">출발</span><span class="btn btn-red">종료</span><span class="btn btn-orange">호출</span></td></tr>
           </tbody>
@@ -369,7 +373,7 @@ tr.highlight td { background: #FFFDE7; }
             <tr><th>No.</th><th>코스</th><th>예약</th><th>예약자</th><th>인원</th><th>출발</th><th>종료</th><th>액션</th></tr>
           </thead>
           <tbody>
-            <tr><td>A 09:00</td>
+            <tr><td>1</td><td>A</td><td>09:00</td>
               <td class="td-team" onclick="openTeam('김철수','010-1234-5678','-','-',['김철수','이민수','박지영','최강현'])"><span class="team-name">김철수</span><span class="info-ic">i</span></td>
               <td>4명</td><td>09:03</td><td>-</td>
               <td class="td-action"><span class="callout" style="font-size:9px;vertical-align:super;">2</span><span class="btn btn-gray">출발</span><span class="btn btn-red">종료</span></td></tr>
@@ -377,7 +381,7 @@ tr.highlight td { background: #FFFDE7; }
               <td class="td-team" onclick="openTeam('이영희','010-2345-6789','○○기업','VIP',['이영희','박서준','최민지'])"><span class="team-name">이영희</span><span class="info-ic">i</span></td>
               <td>3명</td><td>-</td><td>-</td>
               <td class="td-action"><span class="callout" style="font-size:9px;vertical-align:super;">1</span><span class="btn btn-green">출발</span><span class="btn btn-gray">종료</span> <span style="font-size:10px;color:#E65100;font-style:italic;">◀</span></td></tr>
-            <tr><td>C 09:00</td>
+            <tr><td>3</td><td>C</td><td>09:00</td>
               <td class="td-team" onclick="openTeam('박민준','010-3456-7890','-','-',['박민준','김태호','이승민','정예린'])"><span class="team-name">박민준</span><span class="info-ic">i</span></td>
               <td>4명</td><td>09:05</td><td>10:42</td>
               <td class="td-action"><span class="btn btn-gray">출발</span><span class="btn btn-gray">종료</span></td></tr>
@@ -395,7 +399,7 @@ tr.highlight td { background: #FFFDE7; }
           <div class="popup-head">출발 기록 확인</div>
           <div class="popup-body">
             <div style="margin-bottom:8px;font-size:13px;">아래 팀의 출발을 기록하시겠습니까?</div>
-            <div class="popup-info">팀명: 이영희 &nbsp;|&nbsp; A코스<br>예약 09:20 &nbsp;|&nbsp; 현재 09:22</div>
+            <div class="popup-info">팀명: 이영희 &nbsp;|&nbsp; A코스<br>예약 09:20 &nbsp;|&nbsp; 현재시각 09:22</div>
           </div>
           <div class="popup-footer">
             <span class="btn" style="background:#eee;color:#444;padding:8px 16px;font-size:13px;min-height:44px;">취 소</span>
@@ -559,7 +563,7 @@ tr.highlight td { background: #FFFDE7; }
           <button class="select-btn select-btn-dep">🟢 출발 기록</button>
           <button class="select-btn" style="background:#BBBBBB;color:#888;">🔴 종료 기록</button>
         </div>
-        <div style="text-align:center;font-size:17px;font-weight:900;color:#E87722;padding:10px 0 6px;letter-spacing:2px;background:#FFF3E0;margin:0 14px;border-radius:6px;margin-bottom:4px;">⏱ 현재 09:22</div>
+        <div style="text-align:center;font-size:17px;font-weight:900;color:#E87722;padding:10px 0 6px;letter-spacing:2px;background:#FFF3E0;margin:0 14px;border-radius:6px;margin-bottom:4px;">⏱ 현재시각 09:22</div>
         <div class="select-popup-foot">
           <span class="btn" style="background:#eee;color:#555;padding:6px 14px;font-size:12px;">취소 (ESC)</span>
         </div>
